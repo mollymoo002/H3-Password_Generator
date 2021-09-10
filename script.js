@@ -22,12 +22,14 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
 //prompts user to enter the number of characters in a password
 var stringOfCharacters = prompt(
   "Enter the number of characters in the password between 8-128"
 );
+var numOfPasswords = parseInt(stringOfCharacters);
 
-
+var lengthOfPass = length.numOfPasswords;
 
 
 //changes the type of stringOfCharacters from string to integer
@@ -45,12 +47,9 @@ var stringOfLower = confirm(
   "Would you like to include lower case letters?"
 );
 if (stringOfLower) {
-  passwordOption.concat(letterLower);
-} else {
+  passwordOptionLo = passwordOption.concat(letterLower);
+}
 
-} 
-
-console.log(passwordOption);
 
 
 
@@ -58,32 +57,31 @@ console.log(passwordOption);
 var stringOfUpper = confirm(
   "Would you like to include upper case letters?"
 );
-if (stringOfUpper) {
-  passwordOption.concat(letterUpper);
-} else {
 
+if (stringOfUpper) {
+  passwordOptionUp = passwordOption.concat(letterUpper);
 }
 
-console.log(passwordOption);
+
+
 
 //asks the user if they want numbers in their password
 var stringOfNum = confirm("Would you like to include numbers?");
 if (stringOfNum) {
-  passwordOption.concat(num);
-} else {
+  passwordOptionNum = passwordOption.concat(num);
+} 
 
-}
 
-console.log(passwordOption);
+
+
 
 //asks the user if they want special characters in their password
 var stringOfSpecial = confirm(
   "Would you like to include special characters? (%, $, @)"
 );
 if (stringOfSpecial) {
-  passwordOption.concat(specialChar);
-} else {
-
+  passwordOptionSp = passwordOption.concat(specialChar);
 }
 
-console.log(passwordOption);
+
+console.log(lengthOfPass);
