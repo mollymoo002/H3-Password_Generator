@@ -63,8 +63,7 @@ function generatePassword() {
     "Please choose at least one password criteria";
   }
   realVal = "";
-  for (var i = 0; i < letterOption.length; i++) {
-    // Get random whole number from index and push it to the passwordChoice array
+  for (var i = 0; i < Number(stringOfCharacters); i++) {
     realVal += letterOption.charAt(Math.floor(Math.random() * letterOption.length));
   }
   return realVal;
