@@ -13,7 +13,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-
+//Adds all the numbers, letters, and special character options to variables
 var specialChar= ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", 
 ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "}", "~"];
 var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -37,19 +37,22 @@ if (stringOfCharacters < 8 || stringOfCharacters > 128) {
 var stringOfLower = confirm(
   "Would you like to include lower case letters?"
 );
+//asks the user if they want uppercase letters in their password
 var stringOfUpper = confirm(
   "Would you like to include upper case letters?"
 );
+//asks the user if they want numbers in their password
 var stringOfNum = confirm(
   "Would you like to include numbers?"
   );
+  //asks the user if they want special characters in their password
 var stringOfSpecial = confirm(
   "Would you like to include special characters? (%, $, @)"
 );
 
 
+//Adds letters, numbers, and/or special characters if the user confirms it
 var letterOption = [];
-
 if (stringOfLower === true) { 
   letterOption = letterLower;
 }
@@ -66,7 +69,7 @@ else {
   noInput()
 }
 
-// Function for no input for character type
+// Function for when the user does not choose any criteria
 function noInput() {
   if (letterLower === false && letterUpper === false && 
     num === false && specialChar === false) {
@@ -75,12 +78,13 @@ function noInput() {
 }
 
 
+
 var passwordChoice = []
 // Loop through the letterOption length 
-for (var i = 0; i < passwordLength; i++) {
+for (var i = 0; i < stringOfCharacters.length; i++) {
   // Get random whole number from index
-  var characterCode = letterOption[Math.floor(Math.random() * letterOption.length)]
-  passwordChoice.push(String.fromCharCode(characterCode))
+  var characterCode = letterOption[Math.floor(Math.random() * stringOfCharacters.length)]
+  passwordChoice.push(letterOption)
 }
 // Returns password characters and joins into string
-return passwordChoice.join("")
+console.log(passwordChoice.join(""));
