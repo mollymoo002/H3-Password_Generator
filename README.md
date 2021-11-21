@@ -4,7 +4,7 @@ This web page allows a user to generate a random password to use and they can al
 ## Usage
 Please open the page link and follow the web prompts from there. If you want to generate a new password, please refresh the page.
  
-   ![alt text](assets/images/Capture.png)
+   ![Screenshot](assets/images/Capture.PNG)
 
 ## Credits
 - https://www.w3schools.com/jsref/met_win_prompt.asp
